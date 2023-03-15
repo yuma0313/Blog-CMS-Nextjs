@@ -5,6 +5,7 @@ import { getAllBlogIds, getBlogData } from "../../lib/blogs";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
+import Moment from "react-moment";
 
 export default function Blog({ blog }) {
   const router = useRouter();
@@ -16,19 +17,35 @@ export default function Blog({ blog }) {
   return (
     <Layout title={blog.title}>
       <div className="my-5 flex justify-around mx-5 min-h-[calc(100vh_-_100px)]">
-        <div className="p-5 my-3 bg-gray-300 w-3/5 markdown">
+        <div className="p-5 my-3 bg-gray-50 w-3/5 markdown">
           <p className="flex justify-center text-3xl font-bold mx-auto py-5">
             {blog.title}
           </p>
-          <p className="mb-3 flex justify-end">{blog.publishedAt}</p>
+          <p className="mb-3 flex justify-end">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 mt-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <Moment format="YYYY/MM/DD">{blog.publishedAt}</Moment>
+          </p>
           <div
             className="markdown"
             dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
           ></div>
         </div>
-        <div className="p-3 my-3 bg-gray-300 w-72 ">
-          <div className="bg-gray-500">検索</div>
-          <div className="mt-3 bg-gray-500">プロフィール</div>
+        <div className="p-3 my-3 bg-gray-50 w-72 ">
+          <div className="bg-gray-100">検索</div>
+          <div className="mt-3 bg-gray-100">プロフィール</div>
         </div>
       </div>
     </Layout>

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children, title = "Default title" }) => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       <Head>
         <title>{title}</title>
       </Head>

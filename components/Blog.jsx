@@ -10,7 +10,7 @@ const Blog = ({ blog }) => {
             <img src={blog.eyecatch.url} width={300} height={300} />
             <div className="flex flex-col w-full">
               <p className="text-2xl font-bold mx-2 my-2">{blog.title}</p>
-              <p className="flex justify-end mx-2">
+              <div className="flex justify-end mx-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -26,6 +26,9 @@ const Blog = ({ blog }) => {
                   />
                 </svg>
                 <Moment format="YYYY/MM/DD">{blog.publishedAt}</Moment>
+              </div>
+              <p className="my-2 ml-auto mr-2 float-right rounded-2xl bg-gray-500 text-white py-1 px-4">
+                {blog.category && blog.category.name}
               </p>
             </div>
           </div>

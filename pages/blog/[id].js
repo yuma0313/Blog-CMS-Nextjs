@@ -6,6 +6,7 @@ import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
 import Moment from "react-moment";
+import Profile from "../../components/Profile";
 
 export default function Blog({ blog }) {
   const router = useRouter();
@@ -16,9 +17,9 @@ export default function Blog({ blog }) {
 
   return (
     <Layout title={blog.title}>
-      <div className="my-5 flex justify-around mx-5 min-h-[calc(100vh_-_100px)]">
-        <div className="p-5 my-3 bg-gray-50 w-3/5 markdown">
-          <p className="flex justify-center text-3xl font-bold mx-auto py-5">
+      <div className="my-5 flex justify-center mx-5 min-h-[calc(100vh_-_100px)]">
+        <div className="p-3 my-3 bg-gray-50 w-3/5 mr-5 markdown">
+          <p className="flex justify-center text-3xl font-bold mx-auto py-2">
             {blog.title}
           </p>
           <p className="mb-3 flex justify-end">
@@ -43,9 +44,8 @@ export default function Blog({ blog }) {
             dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
           ></div>
         </div>
-        <div className="p-3 my-3 bg-gray-50 w-72 ">
-          <div className="bg-gray-100">検索</div>
-          <div className="mt-3 bg-gray-100">プロフィール</div>
+        <div className="w-72 mt-3 ml-6">
+          <Profile />
         </div>
       </div>
     </Layout>

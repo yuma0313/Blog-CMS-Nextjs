@@ -4,7 +4,7 @@ import Link from "next/link";
 const Profile = () => {
   return (
     <div className="border-solid bg-gray-50">
-      <p className="mb-3 text-xl font-bold bg-gray-200 p-2">プロフィール</p>
+      <p className="mb-5 text-xl font-bold bg-gray-200 p-2">プロフィール</p>
       <div className="flex flex-col items-center">
         <Image
           src="/marimo.png"
@@ -12,7 +12,7 @@ const Profile = () => {
           height={150}
           className="rounded-full"
         />
-        <div className="my-2">
+        <div className="mt-5 mb-2">
           <p className="font-bold text-xl">ユウマ</p>
         </div>
         <div className="flex content-between">

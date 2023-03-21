@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import { getAllBlogIds, getBlogData } from "../../lib/blogs";
 import cheerio from "cheerio";
@@ -9,12 +8,6 @@ import Moment from "react-moment";
 import Profile from "../../components/Profile";
 
 export default function Blog({ blog }) {
-  const router = useRouter();
-
-  if (router.isFallback || !blog) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <Layout title={blog.title}>
       <div className="my-5 flex justify-center mx-5 min-h-[calc(100vh_-_100px)]">

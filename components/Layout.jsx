@@ -9,7 +9,7 @@ const Layout = ({ children, title = "Default title" }) => {
       </Head>
       <Navbar />
       <main>{children}</main>
-      <footer className="fixed bottom-0 left-0 w-full h-5 flex justify-center items-center text-gray-500 text-sm">
+      <footer className="w-full h-5 flex justify-center items-center text-gray-500 text-sm pb-5">
         @BlogApp
       </footer>
     </div>

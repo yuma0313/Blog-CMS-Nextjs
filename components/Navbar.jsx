@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="h-16 px-8 flex items-center">
         <Link href="/">
           <p className="text-white font-bold flex-auto cursor-pointer">
-            BlogApp
+            YumaTechBlog
           </p>
         </Link>
       </div>

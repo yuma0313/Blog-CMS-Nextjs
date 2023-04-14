@@ -12,9 +12,9 @@ export default function Blog({ blog }) {
     <Layout title={blog.title}>
       <div className="my-5 flex justify-center mx-5 min-h-[calc(100vh_-_100px)]">
         <div className="p-3 my-3 bg-gray-50 w-3/5 mr-5 markdown">
-          <p className="flex justify-center text-3xl font-bold mx-auto py-2">
+          <div className="flex justify-center text-3xl font-bold mx-auto py-2">
             {blog.title}
-          </p>
+          </div>
           <p className="mb-3 flex justify-end">
             <svg
               xmlns="http://www.w3.org/2000/svg"

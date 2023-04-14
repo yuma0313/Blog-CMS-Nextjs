@@ -3,11 +3,13 @@ import Moment from "react-moment";
 
 const Blog = ({ blog }) => {
   return (
-    <div>
+    <div className="">
       <Link href={`/blog/${blog.id}`}>
-        <div className="mb-5">
+        <div className="mb-10">
           <div className="cursor-pointer flex">
-            <img src={blog.eyecatch.url} width={300} height={300} />
+            <div className="w-96 mr-5 drop-shadow-md">
+              <img src={blog.eyecatch.url} className="w-full h-44" />
+            </div>
             <div className="flex flex-col w-full">
               <p className="text-2xl font-bold mx-2 my-2">{blog.title}</p>
               <div className="flex justify-end mx-2">

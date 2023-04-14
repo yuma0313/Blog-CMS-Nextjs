@@ -52,7 +52,7 @@
 
 /* Paragraph */
 .markdown p {
-  @apply mb-4 leading-8 md:leading-10 text-justify;
+  @apply my-4 leading-8 md:leading-10 text-justify tracking-wide;
 }
 
 /* Lists */
@@ -96,9 +96,9 @@
 }
 
 .markdown h1 {
-  @apply text-3xl font-bold my-6 bg-gray-100 p-3 rounded-md;
+  @apply text-3xl font-bold bg-gray-100 p-3 rounded-md;
 }
 
 .markdown h2 {
-  @apply text-2xl font-bold my-6 border-b border-gray-400;
+  @apply text-2xl font-bold mt-10 mb-4 border-b border-gray-400;
 }

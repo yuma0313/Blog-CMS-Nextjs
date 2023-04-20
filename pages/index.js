@@ -1,6 +1,6 @@
-import Blog from "../components/Blog";
-import Layout from "../components/Layout";
-import Profile from "../components/Profile";
+import Blog from "../components/Parts/Blog";
+import Layout from "../components/Parts/Layout";
+import Profile from "../components/Parts/Profile";
 import { client } from "../lib/client";
 
 export default function Home({ blog }) {

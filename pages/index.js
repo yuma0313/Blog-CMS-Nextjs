@@ -6,15 +6,15 @@ import { client } from "../lib/client";
 export default function Home({ blog }) {
   return (
     <Layout title="ブログ一覧">
-      <div className="my-5 flex flex-col md:flex-row justify-center mx-5 min-h-[calc(100vh_-_100px)]">
-        <div className="p-4 my-3 bg-gray-50 w-full md:w-3/5 mr-5">
+      <div className="my-5 flex flex-col sm:flex-row justify-center mx-5 min-h-[calc(100vh_-_100px)]">
+        <div className="p-4 my-3 bg-gray-50 w-full sm:w-3/5 mr-5">
           <ul>
             {blog.map((blog) => (
               <Blog key={blog.id} blog={blog} />
             ))}
           </ul>
         </div>
-        <div className="w-full md:w-72 mt-3 md:ml-6">
+        <div className="w-full sm:w-72 mt-3 sm:ml-6">
           <Profile />
         </div>
       </div>

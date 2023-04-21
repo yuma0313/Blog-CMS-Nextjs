@@ -52,7 +52,7 @@
 
 /* Paragraph */
 .markdown p {
-  @apply my-4 leading-8 md:leading-10 text-justify tracking-wide;
+  @apply my-4 leading-6 sm:leading-8 text-justify tracking-normal sm:tracking-wide;
 }
 
 /* Lists */

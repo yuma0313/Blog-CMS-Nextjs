@@ -6,8 +6,8 @@ const Blog = ({ blog }) => {
     <div className="">
       <Link href={`/blog/${blog.id}`}>
         <div className="mb-10">
-          <div className="cursor-pointer flex flex-col md:flex-row">
-            <div className="w-full md:w-96 mr-5 drop-shadow-md">
+          <div className="cursor-pointer flex flex-col sm:flex-row">
+            <div className="w-full sm:w-96 mr-5 drop-shadow-md">
               <img src={blog.eyecatch.url} className="w-full h-44" />
             </div>
             <div className="flex flex-col w-full">

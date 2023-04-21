@@ -10,8 +10,8 @@ import Profile from "../../components/Parts/Profile";
 export default function Blog({ blog }) {
   return (
     <Layout title={blog.title}>
-      <div className="my-5 flex justify-center mx-5 min-h-[calc(100vh_-_100px)]">
-        <div className="p-3 my-3 bg-gray-50 w-3/5 mr-5 markdown">
+      <div className="my-5 flex flex-col sm:flex-row justify-center mx-5 min-h-[calc(100vh_-_100px)]">
+        <div className="p-3 my-3 bg-gray-50 w-full sm:w-3/5 mr-5 markdown">
           <div className="flex justify-center text-3xl font-bold mx-auto py-2">
             {blog.title}
           </div>
@@ -37,7 +37,7 @@ export default function Blog({ blog }) {
             dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
           ></div>
         </div>
-        <div className="w-72 mt-3 ml-6">
+        <div className="w-full sm:w-72 mt-3 sm:ml-6">
           <Profile />
         </div>
       </div>

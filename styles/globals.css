@@ -102,3 +102,7 @@
 .markdown h2 {
   @apply text-2xl font-bold mt-10 mb-4 border-b border-gray-400;
 }
+
+.markdown h3 {
+  @apply text-xl font-bold mt-10 mb-4 border-b border-gray-400;
+}

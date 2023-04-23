@@ -10,7 +10,7 @@ const Layout = ({ children, title = "Default title" }) => {
       <Navbar />
       <main>{children}</main>
       <footer className="w-full h-5 flex justify-center items-center text-gray-500 text-sm pb-5">
-        @BlogApp
+        @YumaTechBlog
       </footer>
     </div>
   );

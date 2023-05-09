@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../../components/Parts/Layout";
+import Layout from "../../components/Layout";
 import { getAllBlogIds, getBlogData } from "../../lib/blogs";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
 import Moment from "react-moment";
-import Profile from "../../components/Parts/Profile";
+import Profile from "../../components/Profile";
 
 export default function Blog({ blog }) {
   return (

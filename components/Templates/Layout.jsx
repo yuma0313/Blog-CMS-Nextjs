@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../Navbar";
+import Navbar from "../Organisms/Navbar";
 
 const Layout = ({ children, title = "Default title" }) => {
   return (

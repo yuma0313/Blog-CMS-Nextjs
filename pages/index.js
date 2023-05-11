@@ -1,6 +1,6 @@
-import Blog from "../components/Blog";
-import Layout from "../components/Layout";
-import Profile from "../components/Profile";
+import Blog from "../components/Templates/Blog";
+import Layout from "../components/Templates/Layout";
+import Profile from "../components/Molecules/Profile";
 import { client } from "../lib/client";
 
 export default function Home({ blog }) {

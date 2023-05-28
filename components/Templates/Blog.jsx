@@ -12,7 +12,7 @@ const Blog = ({ blog }) => {
               <img src={blog.eyecatch.url} className="w-full h-44" />
             </div>
             <div className="flex flex-col w-full">
-              <BlogTitle title={blog.title} />
+              <BlogTitle props={blog.title} />
               <div className="flex justify-end mx-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

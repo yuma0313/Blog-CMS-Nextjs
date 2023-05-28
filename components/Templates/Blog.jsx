@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Moment from "react-moment";
+import BlogTitle from "../Atoms/BlogTitle";
 
 const Blog = ({ blog }) => {
   return (
@@ -11,9 +12,7 @@ const Blog = ({ blog }) => {
               <img src={blog.eyecatch.url} className="w-full h-44" />
             </div>
             <div className="flex flex-col w-full">
-              <p className="text-2xl tracking-wide font-bold mx-2 my-2">
-                {blog.title}
-              </p>
+              <BlogTitle title={blog.title} />
               <div className="flex justify-end mx-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

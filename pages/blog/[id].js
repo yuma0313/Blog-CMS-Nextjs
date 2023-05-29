@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../components/Templates/Layout";
+import Layout from "../../components/Organisms/Layout";
 import { getAllBlogIds, getBlogData } from "../../lib/blogs";
 import cheerio from "cheerio";
 import hljs from "highlight.js";

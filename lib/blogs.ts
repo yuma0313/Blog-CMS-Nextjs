@@ -6,7 +6,9 @@ export async function getAllBlogData() {
   );
   const blogs = await res.json();
   const filteredBlogs = blogs.sort(
-    (a, b) => new Date(b.created_at) - new Date(a.created_at)
+    (a, b) =>
+      //getTime()メソッドでDateオブジェクトをミリ秒に変換し減算
+      new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
   );
   return filteredBlogs;
 }

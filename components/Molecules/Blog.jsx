@@ -10,11 +10,11 @@ const Blog = ({ blog }) => {
       <Link href={`/blog/${blog.id}`}>
         <div className="mb-10">
           <div className="cursor-pointer flex flex-col sm:flex-row">
-            <BlogImage props={blog.eyecatch.url} />
+            <BlogImage image={blog.eyecatch.url} />
             <div className="flex flex-col w-full">
-              <BlogTitle props={blog.title} />
-              <BlogCreatedAt props={blog.publishedAt} />
-              <BlogCategory props={blog.category.name} />
+              <BlogTitle title={blog.title} />
+              <BlogCreatedAt date={blog.publishedAt} />
+              <BlogCategory category={blog.category.name} />
             </div>
           </div>
         </div>

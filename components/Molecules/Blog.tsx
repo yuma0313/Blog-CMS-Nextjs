@@ -4,7 +4,25 @@ import BlogImage from "../Atoms/Blog/BlogImage";
 import BlogCreatedAt from "../Atoms/Blog/BlogCreatedAt";
 import BlogCategory from "../Atoms/Blog/BlogCategory";
 
-const Blog = ({ blog }) => {
+//propsの型を明示的に定義する
+export type BlogType = {
+  id: string;
+  title: string;
+  body: string;
+  publishedAt: string;
+  category: {
+    name: string;
+  };
+  eyecatch: {
+    url: string;
+  };
+};
+
+type BlogProps = {
+  blog: BlogType;
+};
+
+const Blog: React.FC<BlogProps> = ({ blog }) => {
   return (
     <div>
       <Link href={`/blog/${blog.id}`}>

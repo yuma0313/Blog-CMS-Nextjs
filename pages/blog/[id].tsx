@@ -6,8 +6,14 @@ import hljs from "highlight.js";
 import "highlight.js/styles/hybrid.css";
 import Moment from "react-moment";
 import Profile from "../../components/Molecules/Profile";
+import { BlogType } from "../../components/Molecules/Blog";
+import { GetStaticPaths, GetStaticProps } from "next";
 
-export default function Blog({ blog }) {
+type BlogPageProps = {
+  blog: BlogType;
+};
+
+const Blog: React.FC<BlogPageProps> = ({ blog }) => {
   return (
     <Layout title={blog.title}>
       <div className="my-5 flex flex-col sm:flex-row justify-center mx-5 min-h-[calc(100vh_-_100px)]">
@@ -43,18 +49,20 @@ export default function Blog({ blog }) {
       </div>
     </Layout>
   );
-}
+};
 
-export async function getStaticPaths() {
+export default Blog;
+
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await getAllBlogIds();
 
   return {
     paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const blog = await getBlogData(params.id);
 
   // ---- 追加する処理 ここから ----
@@ -72,4 +80,4 @@ export async function getStaticProps({ params }) {
     },
     revalidate: 3,
   };
-}
+};

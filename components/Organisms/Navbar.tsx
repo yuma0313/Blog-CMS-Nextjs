@@ -5,9 +5,9 @@ const Navbar = () => {
     <div className="bg-gray-800">
       <div className="h-16 px-8 flex items-center">
         <Link href="/">
-          <p className="text-white font-bold flex-auto cursor-pointer">
+          <a className="text-white font-bold flex-auto cursor-pointer">
             YumaTechBlog
-          </p>
+          </a>
         </Link>
       </div>
     </div>

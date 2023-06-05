@@ -1,7 +1,11 @@
 import Moment from "react-moment";
 
-const BlogCreatedAt = ({ props }) => {
-  const createdAt = props;
+type PublishedAtProps = {
+  date: string;
+};
+
+const BlogCreatedAt: React.FC<PublishedAtProps> = ({ date }) => {
+  const publishedAt = new Date(date);
 
   return (
     <div className="flex justify-end mx-2">
@@ -19,7 +23,7 @@ const BlogCreatedAt = ({ props }) => {
           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
-      <Moment format="YYYY/MM/DD">{createdAt}</Moment>
+      <Moment format="YYYY/MM/DD">{publishedAt}</Moment>
     </div>
   );
 };

@@ -1,8 +1,13 @@
 import Layout from "../Organisms/Layout";
 import Blogs from "../Organisms/Blogs";
 import Profile from "../Molecules/Profile";
+import { BlogType } from "../Molecules/Blog";
 
-const BlogTemplates = ({ blog }) => {
+type BlogTemplatesProps = {
+  blog: BlogType[];
+};
+
+const BlogTemplates: React.FC<BlogTemplatesProps> = ({ blog }) => {
   return (
     <Layout title="ブログ一覧">
       <div className="my-5 flex flex-col sm:flex-row justify-center mx-5 min-h-[calc(100vh_-_100px)]">

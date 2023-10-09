@@ -32,7 +32,10 @@ const Blog: React.FC<BlogProps> = ({ blog }) => {
             <div className="flex flex-col w-full">
               <BlogTitle title={blog.title} />
               <BlogCreatedAt date={blog.publishedAt} />
-              <BlogCategory category={blog.category.name} />
+              <BlogCategory
+                category={blog.category.name}
+                bgColor="bg-blue-500"
+              />
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default async function TodoPage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <CreateTodoForm userId={userId!} />
-      <ul className="flex flex-col gap-2 mt-4">
+      <ul className="flex flex-col gap-2 mt-4 items-start">
         {todos?.map((todo) => (
           <TodoItem todo={todo} userId={userId!} key={todo.id} />
         ))}

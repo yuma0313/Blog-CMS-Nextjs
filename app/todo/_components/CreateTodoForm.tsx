@@ -19,6 +19,7 @@ export default function CreateTodoForm({ userId }: Props) {
       .insert([
         {
           title: title,
+          deadline: formData.get("deadline"),
           user_id: userId,
         },
       ])
@@ -31,6 +32,11 @@ export default function CreateTodoForm({ userId }: Props) {
       <input
         type="text"
         name="title"
+        className="border-2 border-border rounded-md p-2"
+      />
+      <input
+        type="date"
+        name="deadline"
         className="border-2 border-border rounded-md p-2"
       />
       <button type="submit" className="border-2 border-border rounded-md p-2">
